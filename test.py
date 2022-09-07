@@ -6,3 +6,8 @@ def capitalize_string(s):
 # 테스트코드
 def test_capitalize_string():
     assert capitalize_string('test') == 'Test'
+
+ 
+
+
+a=1
