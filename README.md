@@ -7,7 +7,7 @@
     4. 그럼 깃허브액션 워크플로우에서 test_ 을 인식하여 def 테스트해줌 (pytest 모듈)
     5. 필요한 모듈은 requirements에 저장해서 의존성 캐싱
 
-### 예시
+#### 예시
     
     메인 파이썬
 
@@ -36,5 +36,7 @@ def test_add_negative():
     assert add_numbers(4, -100) == -96
 
 ```
+
+    위에처럼 자기가만든 기능은 test에 추가할것을 권장
 
 
