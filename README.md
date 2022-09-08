@@ -45,7 +45,9 @@ def test_add_negative():
 	1. main 옆에 화살표 눌려서 view all branch 클릭
 	2. 그리고 new branch로 자기꺼 branch 만들기
 	3. main 을 기준으로만들면 main 파일을 그대로 가져와서 만들어짐
-	4. 자기가 만든 기능을 다완성시 pull request 을 눌려서  main <- private branch  로 설정
+	4. 자기가 만든 기능을 다완성시 pull request 을 눌려서, new pull request 누르고  base: main <- compare: private branch  로 설정
 	5. merge 요청시 github action 실행
 	6. github action 에러없으면 merge commit 이후 자기 브랜치 제거 
 	7. 새로운기능을 만들고자 다시 작업시 1번부터 재반복
+
+궁금한 사항은 Slack
