@@ -1,4 +1,4 @@
-## Github 사용법
+# Github 사용법
 ### Github Action 사용법 
 	
 	1. pytest 를 사용한 python test
