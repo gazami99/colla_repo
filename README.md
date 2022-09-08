@@ -15,24 +15,24 @@
 
 # math.py
 def add_numbers(a, b):
-	return a + b
+   return a + b
 ```
     
     pull_request를 위한 test 파이썬 파일 def  3개  테스트함 
     
-    ```python
+```python
 
-    # test_math.py
+# test_math.py
     
-    from math import add_numbers
+from math import add_numbers
     
-    def test_add_positive():
-    assert add_numbers(1, 2) == 3
+def test_add_positive():
+   assert add_numbers(1, 2) == 3
 
-    def test_add_zero():
-    assert add_numbers(1, 0) == 1
+def test_add_zero():
+   assert add_numbers(1, 0) == 1
 
-    def test_add_negative():
-    assert add_numbers(4, -100) == -96
+def test_add_negative():
+   assert add_numbers(4, -100) == -96
 
-    ```
+```
