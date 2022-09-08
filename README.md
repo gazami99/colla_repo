@@ -13,7 +13,7 @@
 
 ```python
 
-# math.py
+# mathadd.py
 def add_numbers(a, b):
     return a + b
 ```
@@ -24,7 +24,7 @@ def add_numbers(a, b):
 
 # test_math.py
     
-from math import add_numbers
+from mathadd import add_numbers
     
 def test_add_positive():
     assert add_numbers(1, 2) == 3
