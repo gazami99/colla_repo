@@ -1,5 +1,5 @@
-## 깃허브 사용법
-### 파이썬 
+## Github 사용법
+### Github Action 사용법 
 	
 	1. pytest 를 사용한 python test
     2. 테스트하고 싶은 파이썬 파일을 def 로 작성하고 파일 시작이름이 test_*.py 형식으로 하나더 작성함
