@@ -10,7 +10,7 @@ class ServerManager:
     def __init__(self,url,params):
         
         self.response = requests.get(url, params=params)
-        self.urlCheck = (self.response.status_code == 200)
+        self.urlCheck = (self.response.status_code == 200)   # 200 이면  요청한 url 링크가 정상접속 
     
     def toDataFrame(self):
         
