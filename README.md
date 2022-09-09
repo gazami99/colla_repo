@@ -1,4 +1,4 @@
-# real.py가 소스파일입니다
+# real.py가 소스파일입니다 (getcovid test_function에서 테스트)
 
 # Github 사용법
 ## Github Action 사용법 
