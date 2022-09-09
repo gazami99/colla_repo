@@ -15,9 +15,3 @@ def test_getcovid():
     
     assert not test_df.any == False
     
-
-def test_load():
-    
-    result = loadInfo()
-    
-    assert result == True
