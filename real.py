@@ -44,5 +44,5 @@ def loadInfo():
             cursor.executemany(sql, datas)
             connection.commit()
          
-            return connection.is_connected()
+
 
