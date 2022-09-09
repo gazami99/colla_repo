@@ -7,9 +7,12 @@ name: Python application
 on:
   push:
     paths-ignore:
-      - 'venv/**
-
-
+      - 'venv/**'
+      
+  pull_request:
+    paths-ignore:
+      - 'venv/**'
+      
 
 permissions:
   contents: read
