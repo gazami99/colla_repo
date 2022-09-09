@@ -5,13 +5,11 @@ name: Python application
  
 
 on:
-  pull_request:
-    branches:    
-      - '!venv/**'
   push:
-   branches:    
-      - '!venv/**'
-  
+    paths-ignore:
+      - 'venv/**
+
+
 
 permissions:
   contents: read
