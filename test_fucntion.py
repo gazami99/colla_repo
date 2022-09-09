@@ -1,4 +1,4 @@
-#test_reqJSON.py
+#test_fucntion.py.py
 from reqJSON import ServerManager
 from real import getCovidinfo,loadInfo
 
