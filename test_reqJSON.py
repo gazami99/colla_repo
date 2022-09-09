@@ -1,5 +1,6 @@
 #test_reqJSON.py
 from reqJSON import ServerManager
+import real
 
 def test_run_stuff():
     url = 'http://apis.data.go.kr/1352000/ODMS_COVID_05/callCovid05Api'
