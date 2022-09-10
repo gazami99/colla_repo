@@ -57,6 +57,7 @@ def loadInfo():
     sql = "insert into covidinfo(confcase, confcaseRate, creaeDt, criticalRate, death, deathRate, gubun) values (%s, %s, %s, %s, %s, %s, %s)"
     with pymysql.connect(host='127.0.0.1', port=3306, user='bigdata', password='bigdata', db='test', charset='utf8') as connection:
         with connection.cursor() as cursor:
+            IsConn == connection.is_connected()
             cursor.execute(create_table_sql)
             cursor.executemany(sql, datas)
             connection.commit()
