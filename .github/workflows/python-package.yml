@@ -34,7 +34,6 @@ jobs:
       
       - name: Verify MySQL connection from host
         run: |
-          sudo service mysql start
           mysql --host 127.0.0.1 --port 3306 -uroot -e "SHOW DATABASES"
            
       - name: Test with pytest
