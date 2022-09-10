@@ -3,7 +3,6 @@ import pandas as pd
 import requests
 import xmltodict # xml을 json으로 변환
 import pymysql
-
  # mysql과 파이썬이 소통할 수 있게 하는 라이브러리
 
 # pymysql사용해서 Db에 등록일자가 등록되어 있으면 db에서 select하게 만약 없으면 api활용해서 받아오고 저장한다음 select하게?
@@ -61,6 +60,8 @@ def loadInfo():
             cursor.execute(create_table_sql)
             cursor.executemany(sql, datas)
             connection.commit()
-			
+            
     return IsConn
+         
+
          
