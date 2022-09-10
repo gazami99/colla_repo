@@ -40,7 +40,7 @@ def loadInfo():
         [int(df.iloc[1][0]), int(df.iloc[1][1]), df.iloc[1][2], int(df.iloc[1][3]), int(df.iloc[1][4]), int(df.iloc[1][5]), df.iloc[1][6]]
     ]
 	
-	create_table_sql = '''
+    create_table_sql = '''
     CREATE TABLE IF NOT EXISTS covidinfo (
                                              
  	 confcase INT(11) NOT NULL,                        
