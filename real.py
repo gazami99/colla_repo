@@ -38,11 +38,30 @@ def loadInfo():
         [int(df.iloc[0][0]), int(df.iloc[0][1]), df.iloc[0][2], int(df.iloc[0][3]), int(df.iloc[0][4]), int(df.iloc[0][5]), df.iloc[0][6]],
         [int(df.iloc[1][0]), int(df.iloc[1][1]), df.iloc[1][2], int(df.iloc[1][3]), int(df.iloc[1][4]), int(df.iloc[1][5]), df.iloc[1][6]]
     ]
-    sql = "insert into covidinfo(confcase, confcaseRate, creaeDt, criticalRate, death, deateRate, gubun) values (%s, %s, %s, %s, %s, %s, %s)"
+	
+    create_table_sql = '''
+    CREATE TABLE IF NOT EXISTS covidinfo (
+                                             
+ 	 confcase INT(11) NOT NULL,                        
+ 	 confcaseRate VARCHAR(20) NULL,                       
+ 	 creaeDt DATE NULL,                                   
+ 	 criticalRate DECIMAL(7,2) NULL,                                 
+ 	 death  INT(11) NULL,
+	 deathRate DECIMAL(7,2) NULL,
+	 gubun VARCHAR(255) NULL
+
+	 ) default character set utf8 collate utf8_general_ci
+    '''
+	
+    sql = "insert into covidinfo(confcase, confcaseRate, creaeDt, criticalRate, death, deathRate, gubun) values (%s, %s, %s, %s, %s, %s, %s)"
     with pymysql.connect(host='127.0.0.1', port=3306, user='bigdata', password='bigdata', db='test', charset='utf8') as connection:
         with connection.cursor() as cursor:
+            IsConn = connection.open
+            cursor.execute(create_table_sql)
             cursor.executemany(sql, datas)
             connection.commit()
+            
+    return IsConn
          
 
-
+         

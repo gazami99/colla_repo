@@ -1,4 +1,7 @@
-# real.py가 소스파일입니다 (getcovid test_function에서 테스트)
+## main pull_request 요청시 변경사항은 여기에
+
+	real.py   test_fucntion으로 테스트완료
+	real.py에서 load_Info 약간수정
 
 # Github 사용법
 ## Github Action 사용법 
