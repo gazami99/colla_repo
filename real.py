@@ -51,7 +51,7 @@ def loadInfo():
 	 deathRate DECIMAL(7,2) NULL,
 	 gubun VARCHAR(255) NULL
 
-	 )
+	 ) default character set utf8 collate utf8_general_ci
     '''
 	
     sql = "insert into covidinfo(confcase, confcaseRate, creaeDt, criticalRate, death, deathRate, gubun) values (%s, %s, %s, %s, %s, %s, %s)"
