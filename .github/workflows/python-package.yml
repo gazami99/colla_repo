@@ -12,6 +12,7 @@ jobs:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
           MYSQL_DATABASE: 'test'
           MYSQL_USER: 'bigdata'
+          MYSQL_PASSWORD: 'bigdata'
         ports:
         - 3306:3306
         options: --health-cmd="mysqladmin ping" 
