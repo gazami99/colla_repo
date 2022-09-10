@@ -17,6 +17,6 @@ def test_getcovid():   #   df가 잘 나오는지 테스트
     
 def test_loadinfo(): # sql 연동 테스트
     
-    result = loadinfo()
+    result = loadInfo()
     assert result == True
     
