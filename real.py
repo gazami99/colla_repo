@@ -46,7 +46,7 @@ def loadInfo():
             cursor.executemany(sql, datas)
             connection.commit()
 			
-	return IsConn
+	return IsConnll
          
 
          
