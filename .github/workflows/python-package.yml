@@ -11,7 +11,7 @@ jobs:
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
         ports:
-        - 3306
+        - 3306:3306
         options: --health-cmd="mysqladmin ping" 
                  --health-interval=10s 
                  --health-timeout=5s 
@@ -35,7 +35,7 @@ jobs:
       - name: Verify MySQL connection from host
         run: |
           sudo service mysql start
-          mysql --host 127.0.0.1 --port 3306 -uroot -ppassword -e "SHOW DATABASES"
+          mysql --host 127.0.0.1 --port 3306 -uroot -e "SHOW DATABASES"
            
       - name: Test with pytest
         run: |
