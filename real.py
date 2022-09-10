@@ -34,7 +34,6 @@ def getCovidinfo(date):
 
 def loadInfo():
     df = getCovidinfo('2022-05-01')
-    IsConn = False
     datas = [
         [int(df.iloc[0][0]), int(df.iloc[0][1]), df.iloc[0][2], int(df.iloc[0][3]), int(df.iloc[0][4]), int(df.iloc[0][5]), df.iloc[0][6]],
         [int(df.iloc[1][0]), int(df.iloc[1][1]), df.iloc[1][2], int(df.iloc[1][3]), int(df.iloc[1][4]), int(df.iloc[1][5]), df.iloc[1][6]]
@@ -56,8 +55,8 @@ def loadInfo():
 	
     sql = "insert into covidinfo(confcase, confcaseRate, creaeDt, criticalRate, death, deathRate, gubun) values (%s, %s, %s, %s, %s, %s, %s)"
     with pymysql.connect(host='127.0.0.1', port=3306, user='bigdata', password='bigdata', db='test', charset='utf8') as connection:
-        IsConn = connection.is_connected()
         with connection.cursor() as cursor:
+	    IsConn = connection.open
             cursor.execute(create_table_sql)
             cursor.executemany(sql, datas)
             connection.commit()
