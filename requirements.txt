@@ -1,5 +1,3 @@
-
 pandas
 requests
-xmltodict 
-pymysql
+xmltodict
